@@ -11,14 +11,22 @@ const CardContainer = styled.div`
 const Imagem = styled.img`
   width: 300px;
 `
+export default class Card extends React.Component {
 
-export default function Card(props) {
-  return (
-    <CardContainer>
-      <Imagem src={props.imagem} />
-      <p>{props.nomeProduto}</p>
-      <p>{props.precoProduto}</p>
-      <button>Adicionar ao carrinho</button>
-    </CardContainer>
-  );
+  onClickBotao = () => {
+    console.log("clicou")
+  }
+
+  render() {
+    return (
+      
+        <CardContainer>
+          <Imagem src={this.props.imagem} />
+          <p>{this.props.nomeProduto}</p>
+          <p>{this.props.precoProduto}</p>
+          <button onClick={this.onClickBotao}>Adicionar ao carrinho</button>
+        </CardContainer>
+      
+    )
+  }
 }
