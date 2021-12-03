@@ -71,7 +71,7 @@ class App extends React.Component {
           case "Crescente":
             return produtoDaVez.valor - produtoSeguinte.valor
           case "Decrescente":
-            return produtoDaVez.valor + produtoSeguinte.valor
+            return produtoSeguinte.valor - produtoDaVez.valor
           case "Titulo":
             return produtoDaVez.tituloProduto.localeCompare(produtoSeguinte.tituloProduto) //ordenação por titulo
           default:
@@ -96,9 +96,9 @@ class App extends React.Component {
           <label for='ordemSelect'>Ordenar por:</label>
           <select name='ordemSelect' value={this.state.selectOrdenado} onChange={this.selectOrdenado} value={this.state.selectOrdenado}>
             <option value="">Nenhum</option>
-            <option value="Crescente">Crescente</option>
-            <option value="Decrescente">Decrescente</option>
-            <option value="Titulo">Título</option>
+            <option value="Crescente">Preço crescente</option>
+            <option value="Decrescente">Preço decrescente</option>
+            <option value="Titulo">Título do produto</option>
           </select>
         </div>
         <div>
