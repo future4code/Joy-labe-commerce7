@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card{
+  display: flex;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.App{
+  display: flex;
+  align-items: center;
+}
